@@ -1,66 +1,108 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Advance Fit
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Advance Fit is a comprehensive gym management system built with Laravel. It provides a user-friendly interface for gym members and a powerful admin panel for managing various aspects of the gym.
 
-## About Laravel
+## Screenshots
+![home](https://github.com/PS213073/advance-fit/assets/107118950/a2169802-6c56-42a6-86c1-625131bf2595)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+![subscriptions](https://github.com/PS213073/advance-fit/assets/107118950/95f7b27c-a076-460e-a328-c7b735029705)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+![exercises](https://github.com/PS213073/advance-fit/assets/107118950/1adbf82a-b790-40e4-a735-3977a9797ff7)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+![contact](https://github.com/PS213073/advance-fit/assets/107118950/65a2ec93-a0ed-4287-a9c1-fe74f500b800)
 
-## Learning Laravel
+![login](https://github.com/PS213073/advance-fit/assets/107118950/fdf5bade-1255-4ee9-bc0c-97ce70fdac7c)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+![admin-dashboard](https://github.com/PS213073/advance-fit/assets/107118950/2fb7c73f-83e9-4dd3-b412-083c2f264132)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Table of Contents
 
-## Laravel Sponsors
+- [Features](#features)
+    - [User Features](#user-features)
+    - [Admin Features](#admin-features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Default User Credentials](#default-user-credentials)
+- [Eloquent Relationships](#eloquent-relationships)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Features
 
-### Premium Partners
+### User Features
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+- User registration and authentication
+- Check-in system for gym members
+- Can add Subscription to his account.
 
-## Contributing
+### Admin Features
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- Role and permission management
+- Employee management
+- Shift management
+- Subscription management
+- Exercise and muscle group management
+- Client management
+- Check-in tracking
 
-## Code of Conduct
+## Technologies Used
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- Laravel 11.x
+- Laravel Breeze (for authentication)
+- Spatie Laravel Roles and Permissions (for authorization)
+- Tailwind CSS (for styling)
+- Font Awesome (for icons)
 
-## Security Vulnerabilities
+## Installation
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/advance-fit.git
+    ```
+2. Install dependencies:
+    ```bash
+    cd advance-fit
+    composer install
+    npm install
+    ```
+3. Create a copy of the .env.example file and rename it to .env. Then, generate an application key:
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
+    ```
+4. Configure your database credentials in the .env file.
+5. Run migrations and seed the database:
+    ```bash
+    php artisan migrate --seed
+    ```
+6. Build frontend assets:
+    ```bash
+    npm run dev
+    ```
+7. Start the development server:
+    ```bash
+    php artisan serve
+    ```
+The application should now be accessible at http://localhost:8000.
 
-## License
+## Default User Credentials
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+For testing purposes, you can use the following credentials:
+
+- Normal User:
+    - Username: test@test.com
+    - Password: test
+
+- Admin User:
+    - Dashboard URL: http://127.0.0.1:8000/admin/dashboard
+    - Username: admin@admin.com
+    - Password: admin
+
+## Eloquent Relationships
+
+This project makes extensive use of Laravel's Eloquent relationships, including many-to-many relationships, to manage the complex data interactions required for a gym management system.
+
+## Additional Information
+
+This project is a gym website, and at the backend, the admin can manage roles, permissions, employees, shifts, subscriptions, exercises, muscle groups, clients, and check-ins. It has a multi-auth system (Breeze package) and uses the Spatie Roles and Permissions package for authorization. Tailwind CSS is used for styling, and Font Awesome icons are used.
+
+Users can register an account and check-in when they are signed in.
